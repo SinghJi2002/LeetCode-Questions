@@ -33,6 +33,7 @@ class Solution {
         if(node==null){
             return(true);
         }
+        //Long conversion because certain cases are too big for int to handle.
         Long current=new Long(node.val);
         //If range broken,return false.
         if(current<=lowerLimit || current>=upperLimit){
