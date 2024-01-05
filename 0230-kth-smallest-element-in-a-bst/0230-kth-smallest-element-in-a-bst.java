@@ -14,6 +14,8 @@
  * }
  */
 class Solution {
+    //Approach is simple.Inorder traversal se sorted array. Fir return the kth element from
+    //the start.
     public int kthSmallest(TreeNode root, int k) {
         List<Integer>solution=new ArrayList<>();
         Smallest(root,solution);
