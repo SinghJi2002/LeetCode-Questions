@@ -22,6 +22,7 @@ class Solution {
         if(root==null){
             return(0);
         }
+        //Math max has been used for left and right val to avoid -ve value nodes.
         int leftVal=Math.max(0,maxPathSum(root.left,max));
         int rightVal=Math.max(0,maxPathSum(root.right,max));
         max[0]=Math.max(max[0],root.val+leftVal+rightVal);
