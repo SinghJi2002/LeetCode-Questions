@@ -26,7 +26,7 @@ class Solution {
         while(q.size()>0)
         {
             int len = q.size();
-            List<Integer> sub = new ArrayList<>();
+            
             for(int i=0;i<len;i++)
             {
                 TreeNode node1 = q.poll();
@@ -43,7 +43,7 @@ class Solution {
                     q.offer(node1.right);
                 }
             }
-            ans.add(sub);
+            
             c++;
         }
         return c;
