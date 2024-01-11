@@ -13,6 +13,8 @@
  *     }
  * }
  */
+
+/*The approach was to first count make a list of numbers available to us. The next was to use two pointers/variables to store adjacent elements and find the difference between thier values and hence return the min difference*/
 class Solution {
     
     int[]numList=new int[100001];
