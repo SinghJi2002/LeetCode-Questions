@@ -1,5 +1,8 @@
 class Solution {
+    //The general approach is explained in the video: https://www.youtube.com/watch?v=5wSXA6qn4BI
+    //Though ahead I will try my best to explain the approach to you.
 
+    //The general approach is to first construct a tree, the find the answer.
 	class TreeNode {
 		private TreeNode left;
 		private TreeNode right;
@@ -20,15 +23,15 @@ class Solution {
 
 	public int countHighestScoreNodes(int[] parents) {
 		long max = 0l;
-
-		int n = parents.length;
+        int n = parents.length;
 		int ans = 0;
-		TreeNode[] tree = new TreeNode[n];
-
-		for (int i = 0; i < parents.length; i++) {
+		
+        //Below we are creating a tree.
+        TreeNode[] tree = new TreeNode[n];
+        for (int i = 0; i < parents.length; i++) {
 			tree[i] = new TreeNode();
 		}
-
+        //Here we are declaring the childs of each parent.
 		for (int i = 1; i < parents.length; i++) {
 			int parentId = parents[i];
 			if (tree[parentId].left == null) {
@@ -37,10 +40,10 @@ class Solution {
 				tree[parentId].right = tree[i];
 			}
 		}
-
+        //Here we are performing node count.
 		countNodes(tree[0]);
 
-
+        //Here we will solve for the anwer
 		for (int i = 0; i < parents.length; i++) {
 			long product = 1;
 			int leftCnt = tree[i].left == null ? 0 : tree[i].left.nodeCount;
