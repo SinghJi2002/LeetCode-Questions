@@ -6,13 +6,13 @@ class Solution {
             if(moves.charAt(i)=='L'){
                 hori=hori-1;
             }
-            if(moves.charAt(i)=='R'){
+            else if(moves.charAt(i)=='R'){
                 hori=hori+1;
             }
-            if(moves.charAt(i)=='U'){
+            else if(moves.charAt(i)=='U'){
                 verti=verti+1;
             }
-            if(moves.charAt(i)=='D'){
+            else if(moves.charAt(i)=='D'){
                 verti=verti-1;
             }
         }
