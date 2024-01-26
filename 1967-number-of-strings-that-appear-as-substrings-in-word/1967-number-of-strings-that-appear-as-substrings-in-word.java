@@ -6,7 +6,6 @@ class Solution {
             String current=patterns[i];
             int lenCurrent=current.length();
             for(int start=0;start<word.length()-lenCurrent+1;start++){
-                System.out.println(word.substring(start,start+lenCurrent));
                 if(current.equals(word.substring(start,start+lenCurrent))){
                     System.out.println(word.substring(start,start+lenCurrent-1));
                     count++;
