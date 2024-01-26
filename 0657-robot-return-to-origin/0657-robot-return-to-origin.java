@@ -16,11 +16,6 @@ class Solution {
                 verti=verti-1;
             }
         }
-        if(hori==0 && verti==0){
-            return(true);
-        }
-        else{
-            return(false);
-        }
+        return(hori==0 && verti==0);
     }
 }
