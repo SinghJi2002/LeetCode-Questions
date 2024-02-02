@@ -1,3 +1,4 @@
+/*https://www.youtube.com/watch?v=C_xw0k5S7Sw*/
 class Solution {
     public boolean isLongPressedName(String name, String typed) {
         int p1=0;
